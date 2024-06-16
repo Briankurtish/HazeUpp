@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hazeupp/common/styles/spacing_styles.dart';
+import 'package:hazeupp/common/widgets/login_signup/form_divider.dart';
+import 'package:hazeupp/common/widgets/login_signup/social_buttons.dart';
+import 'package:hazeupp/features/authentication/screens/login/widgets/login_form.dart';
+import 'package:hazeupp/features/authentication/screens/login/widgets/login_header.dart';
+import 'package:hazeupp/utils/constants/colors.dart';
 import 'package:hazeupp/utils/constants/image_strings.dart';
 import 'package:hazeupp/utils/constants/sizes.dart';
 import 'package:hazeupp/utils/constants/text_strings.dart';
 import 'package:hazeupp/utils/helpers/helper_functions.dart';
+import 'package:iconsax/iconsax.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -19,25 +26,18 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               // Logo title and sub title
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image(
-                    height: 150,
-                    image: AssetImage(
-                        dark ? TImages.lightAppLogo : TImages.darkAppLogo),
-                  ),
-                  Text(
-                    TTexts.loginTitle,
-                    style: Theme.of(context).textTheme.headlineMedium,
-                  ),
-                  const SizedBox(height: TSizes.sm),
-                  Text(
-                    TTexts.loginSubTitle,
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                ],
-              ),
+              TLoginHeader(dark: dark),
+
+              // Form
+              TLoginForm(),
+
+              // Divider
+              TFormDivider(dark: dark),
+
+              const SizedBox(height: TSizes.spaceBtwSections),
+
+              // Footer
+              TSocialButton(),
             ],
           ),
         ),
