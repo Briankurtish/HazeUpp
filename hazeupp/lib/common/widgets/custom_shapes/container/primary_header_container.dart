@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hazeupp/common/widgets/custom_shapes/container/circular_container.dart';
 import 'package:hazeupp/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 import 'package:hazeupp/utils/constants/colors.dart';
+import 'package:hazeupp/utils/helpers/helper_functions.dart';
 
 class THeaderPrimaryContainer extends StatelessWidget {
   const THeaderPrimaryContainer({
@@ -13,9 +14,10 @@ class THeaderPrimaryContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return TCurvedEdgeWidget(
       child: Container(
-        color: TColors.primary,
+        color: dark ? TColors.dark : TColors.primary,
         padding: const EdgeInsets.all(0),
         child: SizedBox(
           height: 400,
