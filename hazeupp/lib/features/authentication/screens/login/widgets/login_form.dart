@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:hazeupp/features/authentication/screens/signup/signup.dart';
 import 'package:hazeupp/utils/constants/sizes.dart';
 import 'package:hazeupp/utils/constants/text_strings.dart';
 import 'package:iconsax/iconsax.dart';
@@ -17,7 +20,7 @@ class TLoginForm extends StatelessWidget {
           children: [
             // Email
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                   prefixIcon: Icon(Iconsax.direct_right),
                   labelText: TTexts.email),
             ),
@@ -25,7 +28,7 @@ class TLoginForm extends StatelessWidget {
 
             // Password
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.password_check),
                 labelText: TTexts.password,
                 suffixIcon: Icon(Iconsax.eye_slash),
@@ -48,7 +51,7 @@ class TLoginForm extends StatelessWidget {
                 // Forgot Password
                 TextButton(
                   onPressed: () {},
-                  child: Text(TTexts.forgetPassword),
+                  child: const Text(TTexts.forgetPassword),
                 ),
               ],
             ),
@@ -61,7 +64,7 @@ class TLoginForm extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {},
-                child: Text(TTexts.signIn),
+                child: const Text(TTexts.signIn),
               ),
             ),
 
@@ -71,8 +74,8 @@ class TLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                onPressed: () {},
-                child: Text(TTexts.createAccount),
+                onPressed: () => Get.to(() => const SignUpScreen()),
+                child: const Text(TTexts.createAccount),
               ),
             ),
           ],
