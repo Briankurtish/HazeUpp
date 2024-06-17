@@ -3,6 +3,7 @@ import 'package:hazeupp/common/styles/shadows.dart';
 import 'package:hazeupp/common/widgets/custom_shapes/container/rounded_container.dart';
 import 'package:hazeupp/common/widgets/icons/t_circular_icon.dart';
 import 'package:hazeupp/common/widgets/images/t_rounded_image.dart';
+import 'package:hazeupp/common/widgets/texts/t_product_price_text.dart';
 import 'package:hazeupp/common/widgets/texts/t_product_title_text.dart';
 import 'package:hazeupp/utils/constants/colors.dart';
 import 'package:hazeupp/utils/constants/image_strings.dart';
@@ -99,11 +100,9 @@ class TProductCardVertical extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        "670 TL",
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.headlineMedium,
+                      // Price
+                      const TProductPriceText(
+                        price: '690',
                       ),
                       Container(
                         decoration: const BoxDecoration(
