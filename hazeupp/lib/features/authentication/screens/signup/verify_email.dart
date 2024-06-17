@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
+import 'package:hazeupp/common/widgets/success_screen/success_screen.dart';
 import 'package:hazeupp/features/authentication/screens/login/login.dart';
 import 'package:hazeupp/utils/constants/image_strings.dart';
 import 'package:hazeupp/utils/constants/sizes.dart';
@@ -59,7 +61,12 @@ class VerifyEmailScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Get.to(() => const VerifyEmailScreen()),
+                  onPressed: () => Get.to(() => SuccessScreen(
+                        image: TImages.staticSuccessIllustration,
+                        title: TTexts.yourAccountCreatedTitle,
+                        subTitle: TTexts.yourAccountCreatedSubTitle,
+                        onPressed: () => Get.to(() => LoginScreen()),
+                      )),
                   child: const Text(TTexts.tContinue),
                 ),
               ),

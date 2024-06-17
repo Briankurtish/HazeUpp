@@ -81,6 +81,7 @@ class TSignUpForm extends StatelessWidget {
           // Terms and condition checkbox
           const TTermsAndConditions(),
           const SizedBox(height: TSizes.spaceBtwSections),
+
           // Signup Button
           SizedBox(
             width: double.infinity,
