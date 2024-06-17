@@ -3,7 +3,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
 import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:hazeupp/features/shop/screens/home/widgets/home.dart';
+import 'package:hazeupp/features/shop/screens/home/home.dart';
 import 'package:hazeupp/utils/constants/colors.dart';
 import 'package:hazeupp/utils/helpers/helper_functions.dart';
 import 'package:iconsax/iconsax.dart';
