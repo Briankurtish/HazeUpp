@@ -4,7 +4,9 @@ import 'package:hazeupp/common/widgets/custom_shapes/container/search_container.
 import 'package:hazeupp/common/widgets/texts/section_heading.dart';
 import 'package:hazeupp/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:hazeupp/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:hazeupp/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:hazeupp/utils/constants/colors.dart';
+import 'package:hazeupp/utils/constants/image_strings.dart';
 import 'package:hazeupp/utils/constants/sizes.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,7 +14,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -48,6 +50,18 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                ],
+              ),
+            ),
+
+            // Body
+            Padding(
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              child: TPromoSlider(
+                banners: [
+                  TImages.promoBanner1,
+                  TImages.banner3,
+                  TImages.banner2
                 ],
               ),
             ),
