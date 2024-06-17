@@ -38,7 +38,7 @@ class TProductCardVertical extends StatelessWidget {
                 children: [
                   // Thumbnail Image
                   const TRoundedImage(
-                    imageUrl: TImages.productImage1,
+                    imageUrl: TImages.productImage0,
                     applyImageRadius: true,
                   ),
 
@@ -79,7 +79,7 @@ class TProductCardVertical extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TProductTitleText(
-                      title: 'Green Nike Air Shoes', smallSize: true),
+                      title: 'Black Nike TrackSuit', smallSize: true),
                   SizedBox(height: TSizes.spaceBtwItems / 2),
                   Row(
                     children: [
