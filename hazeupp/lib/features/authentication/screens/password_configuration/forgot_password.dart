@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:hazeupp/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:hazeupp/utils/constants/sizes.dart';
 import 'package:hazeupp/utils/constants/text_strings.dart';
 import 'package:iconsax/iconsax.dart';
@@ -39,7 +42,7 @@ class ForgotPassword extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.off(() => const ResetPassword()),
                 child: const Text(TTexts.submit),
               ),
             ),

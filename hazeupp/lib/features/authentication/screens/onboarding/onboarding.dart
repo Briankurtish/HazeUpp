@@ -6,14 +6,8 @@ import 'package:hazeupp/features/authentication/screens/onboarding/widgets/onboa
 import 'package:hazeupp/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
 import 'package:hazeupp/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
 import 'package:hazeupp/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
-import 'package:hazeupp/utils/constants/colors.dart';
 import 'package:hazeupp/utils/constants/image_strings.dart';
-import 'package:hazeupp/utils/constants/sizes.dart';
 import 'package:hazeupp/utils/constants/text_strings.dart';
-import 'package:hazeupp/utils/device/device_utility.dart';
-import 'package:hazeupp/utils/helpers/helper_functions.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});

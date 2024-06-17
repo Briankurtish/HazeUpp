@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hazeupp/features/authentication/screens/signup/verify_email.dart';
 import 'package:hazeupp/features/authentication/screens/signup/widgets/terms_conditions_signupform.dart';
-import 'package:hazeupp/utils/constants/colors.dart';
 import 'package:hazeupp/utils/constants/sizes.dart';
 import 'package:hazeupp/utils/constants/text_strings.dart';
-import 'package:hazeupp/utils/helpers/helper_functions.dart';
 import 'package:iconsax/iconsax.dart';
 
 class TSignUpForm extends StatelessWidget {
@@ -15,7 +13,6 @@ class TSignUpForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
     return Form(
       child: Column(
         children: [

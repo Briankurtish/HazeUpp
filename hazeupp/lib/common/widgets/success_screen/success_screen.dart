@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:hazeupp/common/styles/spacing_styles.dart';
-import 'package:hazeupp/features/authentication/screens/login/login.dart';
-import 'package:hazeupp/features/authentication/screens/signup/verify_email.dart';
-import 'package:hazeupp/utils/constants/image_strings.dart';
 import 'package:hazeupp/utils/constants/sizes.dart';
 import 'package:hazeupp/utils/constants/text_strings.dart';
 import 'package:hazeupp/utils/helpers/helper_functions.dart';
@@ -54,7 +50,7 @@ class SuccessScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Get.to(() => const LoginScreen()),
+                  onPressed: onPressed,
                   child: const Text(TTexts.tContinue),
                 ),
               ),

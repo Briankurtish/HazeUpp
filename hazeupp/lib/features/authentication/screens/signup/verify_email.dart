@@ -1,14 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:hazeupp/common/widgets/success_screen/success_screen.dart';
 import 'package:hazeupp/features/authentication/screens/login/login.dart';
 import 'package:hazeupp/utils/constants/image_strings.dart';
 import 'package:hazeupp/utils/constants/sizes.dart';
 import 'package:hazeupp/utils/constants/text_strings.dart';
 import 'package:hazeupp/utils/helpers/helper_functions.dart';
-import 'package:iconsax/iconsax.dart';
 
 class VerifyEmailScreen extends StatelessWidget {
   const VerifyEmailScreen({super.key});

@@ -3,18 +3,14 @@ import 'package:get/get.dart';
 import 'package:hazeupp/common/widgets/login_signup/form_divider.dart';
 import 'package:hazeupp/common/widgets/login_signup/social_buttons.dart';
 import 'package:hazeupp/features/authentication/screens/signup/widgets/signup_form.dart';
-import 'package:hazeupp/utils/constants/colors.dart';
 import 'package:hazeupp/utils/constants/sizes.dart';
 import 'package:hazeupp/utils/constants/text_strings.dart';
-import 'package:hazeupp/utils/helpers/helper_functions.dart';
-import 'package:iconsax/iconsax.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
