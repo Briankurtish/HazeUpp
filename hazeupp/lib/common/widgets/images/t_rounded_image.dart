@@ -47,9 +47,8 @@ class TRoundedImage extends StatelessWidget {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(borderRadius),
           child: Image(
-            image: isNetworkImage
-                ? NetworkImage(imageUrl)
-                : AssetImage(imageUrl) as ImageProvider,
+            image:
+                isNetworkImage ? NetworkImage(imageUrl) : AssetImage(imageUrl),
             fit: fit,
           ),
         ),

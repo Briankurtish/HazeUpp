@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hazeupp/common/widgets/custom_shapes/container/primary_header_container.dart';
 import 'package:hazeupp/common/widgets/custom_shapes/container/search_container.dart';
+import 'package:hazeupp/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:hazeupp/common/widgets/texts/section_heading.dart';
 import 'package:hazeupp/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:hazeupp/features/shop/screens/home/widgets/home_categories.dart';
@@ -57,11 +58,18 @@ class HomeScreen extends StatelessWidget {
             // Body
             Padding(
               padding: const EdgeInsets.all(TSizes.defaultSpace),
-              child: TPromoSlider(
-                banners: [
-                  TImages.promoBanner1,
-                  TImages.banner3,
-                  TImages.banner2
+              child: Column(
+                children: [
+                  TPromoSlider(
+                    banners: [
+                      TImages.promoBanner1,
+                      TImages.banner3,
+                      TImages.banner2
+                    ],
+                  ),
+
+                  // Popular Products
+                  TProductCardVertical(),
                 ],
               ),
             ),
