@@ -65,7 +65,7 @@ class TProductCardVertical extends StatelessWidget {
                     right: 0,
                     child: TCircularIcon(
                       icon: Iconsax.heart5,
-                      color: TColors.grey,
+                      color: Colors.red,
                     ),
                   ),
                 ],
@@ -76,14 +76,17 @@ class TProductCardVertical extends StatelessWidget {
             // --Details
             Padding(
               padding: EdgeInsets.only(left: TSizes.sm),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TProductTitleText(
-                      title: 'Black Nike TrackSuit', smallSize: true),
-                  SizedBox(height: TSizes.spaceBtwItems / 2),
-                  TBrandTitleWithVerifiedIcon(title: "Nike"),
-                ],
+              child: SizedBox(
+                width: double.infinity,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TProductTitleText(
+                        title: 'Black Nike TrackSuit', smallSize: true),
+                    SizedBox(height: TSizes.spaceBtwItems / 2),
+                    TBrandTitleWithVerifiedIcon(title: "Nike"),
+                  ],
+                ),
               ),
             ),
 
