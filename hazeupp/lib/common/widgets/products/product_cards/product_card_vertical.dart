@@ -3,6 +3,7 @@ import 'package:hazeupp/common/styles/shadows.dart';
 import 'package:hazeupp/common/widgets/custom_shapes/container/rounded_container.dart';
 import 'package:hazeupp/common/widgets/icons/t_circular_icon.dart';
 import 'package:hazeupp/common/widgets/images/t_rounded_image.dart';
+import 'package:hazeupp/common/widgets/texts/t_brand_title_text_with_verified_icon.dart';
 import 'package:hazeupp/common/widgets/texts/t_product_price_text.dart';
 import 'package:hazeupp/common/widgets/texts/t_product_title_text.dart';
 import 'package:hazeupp/utils/constants/colors.dart';
@@ -81,22 +82,7 @@ class TProductCardVertical extends StatelessWidget {
                   TProductTitleText(
                       title: 'Black Nike TrackSuit', smallSize: true),
                   SizedBox(height: TSizes.spaceBtwItems / 2),
-                  Row(
-                    children: [
-                      Text(
-                        "Nike",
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(width: TSizes.xs),
-                      Icon(
-                        Iconsax.verify5,
-                        color: TColors.primary,
-                        size: TSizes.iconXs,
-                      ),
-                    ],
-                  ),
+                  TBrandTitleWithVerifiedIcon(title: "Nike"),
                 ],
               ),
             ),
