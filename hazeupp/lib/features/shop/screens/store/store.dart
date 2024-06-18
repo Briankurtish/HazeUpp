@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hazeupp/common/widgets/appbar/appbar.dart';
+import 'package:hazeupp/common/widgets/appbar/tab_bar.dart';
 import 'package:hazeupp/common/widgets/custom_shapes/container/rounded_container.dart';
 import 'package:hazeupp/common/widgets/custom_shapes/container/search_container.dart';
 import 'package:hazeupp/common/widgets/images/t_circular_image.dart';
@@ -19,110 +20,124 @@ class Store extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
-    return Scaffold(
-      appBar: TAppBar(
-        title: Text(
-          "Store",
-          style: Theme.of(context).textTheme.headlineMedium,
+    return DefaultTabController(
+      length: 5,
+      child: Scaffold(
+        appBar: TAppBar(
+          title: Text(
+            "Store",
+            style: Theme.of(context).textTheme.headlineMedium,
+          ),
+          actions: [
+            TCartCounterIcon(
+              onPressed: () {},
+            )
+          ],
         ),
-        actions: [
-          TCartCounterIcon(
-            onPressed: () {},
-          )
-        ],
-      ),
-      body: NestedScrollView(
-        headerSliverBuilder: (_, innerBoxIsScrolled) {
-          return [
-            SliverAppBar(
-              automaticallyImplyLeading: false,
-              pinned: true,
-              floating: true,
-              backgroundColor: dark ? TColors.black : TColors.white,
-              expandedHeight: 440,
-              flexibleSpace: Padding(
-                padding: EdgeInsets.all(TSizes.defaultSpace),
-                child: ListView(
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  children: [
-                    // Search bar
-                    const SizedBox(height: TSizes.spaceBtwItems),
-                    const TSearchContainer(
-                        text: "Search in Store",
-                        showBorder: true,
-                        showBackground: false,
-                        padding: EdgeInsets.zero),
-                    const SizedBox(height: TSizes.spaceBtwSections),
+        body: NestedScrollView(
+          headerSliverBuilder: (_, innerBoxIsScrolled) {
+            return [
+              SliverAppBar(
+                automaticallyImplyLeading: false,
+                pinned: true,
+                floating: true,
+                backgroundColor: dark ? TColors.black : TColors.white,
+                expandedHeight: 440,
+                flexibleSpace: Padding(
+                  padding: EdgeInsets.all(TSizes.defaultSpace),
+                  child: ListView(
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
+                    children: [
+                      // Search bar
+                      const SizedBox(height: TSizes.spaceBtwItems),
+                      const TSearchContainer(
+                          text: "Search in Store",
+                          showBorder: true,
+                          showBackground: false,
+                          padding: EdgeInsets.zero),
+                      const SizedBox(height: TSizes.spaceBtwSections),
 
-                    // Featured Brands
-                    TSectionHeading(
-                      title: "Featured Brands",
-                      showActionButton: true,
-                      onPressed: () {},
-                    ),
-                    const SizedBox(height: TSizes.spaceBtwItems / 1.5),
+                      // Featured Brands
+                      TSectionHeading(
+                        title: "Featured Brands",
+                        showActionButton: true,
+                        onPressed: () {},
+                      ),
+                      const SizedBox(height: TSizes.spaceBtwItems / 1.5),
 
-                    TGridLayout(
-                        itemCount: 4,
-                        mainAxisExtent: 80,
-                        itemBuilder: (_, index) {
-                          return GestureDetector(
-                            onTap: () {},
-                            child: TRoundedContainer(
-                              padding: const EdgeInsets.all(TSizes.sm),
-                              showBorder: true,
-                              backgroundColor: Colors.transparent,
-                              child: Row(
-                                children: [
-                                  // Icon
-                                  Flexible(
-                                    child: TCircularImage(
-                                      isNetworkImage: false,
-                                      image: TImages.clothIcon,
-                                      backgroundColor: Colors.transparent,
-                                      overlayColor:
-                                          THelperFunctions.isDarkMode(context)
-                                              ? TColors.white
-                                              : TColors.black,
+                      TGridLayout(
+                          itemCount: 4,
+                          mainAxisExtent: 80,
+                          itemBuilder: (_, index) {
+                            return GestureDetector(
+                              onTap: () {},
+                              child: TRoundedContainer(
+                                padding: const EdgeInsets.all(TSizes.sm),
+                                showBorder: true,
+                                backgroundColor: Colors.transparent,
+                                child: Row(
+                                  children: [
+                                    // Icon
+                                    Flexible(
+                                      child: TCircularImage(
+                                        isNetworkImage: false,
+                                        image: TImages.clothIcon,
+                                        backgroundColor: Colors.transparent,
+                                        overlayColor:
+                                            THelperFunctions.isDarkMode(context)
+                                                ? TColors.white
+                                                : TColors.black,
+                                      ),
                                     ),
-                                  ),
-                                  const SizedBox(
-                                      width: TSizes.spaceBtwItems / 2),
+                                    const SizedBox(
+                                        width: TSizes.spaceBtwItems / 2),
 
-                                  // Text
-                                  Expanded(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        TBrandTitleWithVerifiedIcon(
-                                          title: "Nike",
-                                          brandTextSize: TextSizes.large,
-                                        ),
-                                        Text(
-                                          "256 Products",
-                                          overflow: TextOverflow.ellipsis,
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .labelMedium,
-                                        ),
-                                      ],
+                                    // Text
+                                    Expanded(
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          TBrandTitleWithVerifiedIcon(
+                                            title: "Nike",
+                                            brandTextSize: TextSizes.large,
+                                          ),
+                                          Text(
+                                            "256 Products",
+                                            overflow: TextOverflow.ellipsis,
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .labelMedium,
+                                          ),
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                          );
-                        })
+                            );
+                          })
+                    ],
+                  ),
+                ),
+
+                // Tabs
+                bottom: TTabBar(
+                  tabs: [
+                    Tab(child: Text("TrackSuits")),
+                    Tab(child: Text("T-Shirtd")),
+                    Tab(child: Text("Shorts")),
+                    Tab(child: Text("Joggers")),
+                    Tab(child: Text("Orignals")),
                   ],
                 ),
               ),
-            ),
-          ];
-        },
-        body: Container(),
+            ];
+          },
+          body: Container(),
+        ),
       ),
     );
   }
