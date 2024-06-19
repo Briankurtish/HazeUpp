@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hazeupp/common/widgets/appbar/appbar.dart';
 import 'package:hazeupp/common/widgets/custom_shapes/container/primary_header_container.dart';
 import 'package:hazeupp/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:hazeupp/common/widgets/list_tiles/t_user_profile.dart';
 import 'package:hazeupp/common/widgets/texts/section_heading.dart';
+import 'package:hazeupp/features/personalization/screens/profile/profile.dart';
 import 'package:hazeupp/utils/constants/colors.dart';
 import 'package:hazeupp/utils/constants/sizes.dart';
 import 'package:iconsax/iconsax.dart';
@@ -34,7 +36,9 @@ class SettingsScreen extends StatelessWidget {
                   const SizedBox(height: TSizes.spaceBtwSections),
 
                   // User Profile Card
-                  const TUserProfile(),
+                  TUserProfile(
+                    onPressed: () => Get.to(() => const ProfileScreen()),
+                  ),
                   const SizedBox(height: TSizes.spaceBtwSections),
                 ],
               ),
