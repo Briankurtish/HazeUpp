@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:hazeupp/common/widgets/chips/choice_chip.dart';
 import 'package:hazeupp/common/widgets/custom_shapes/container/rounded_container.dart';
 import 'package:hazeupp/common/widgets/texts/section_heading.dart';
 import 'package:hazeupp/common/widgets/texts/t_product_price_text.dart';
@@ -80,13 +81,39 @@ class ProductAttributes extends StatelessWidget {
 
         // Attribues
         Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const TSectionHeading(title: "Colors", showActionButton: false),
             const SizedBox(height: TSizes.spaceBtwItems / 2),
-            ChoiceChip(
-              label: Text("Green"),
-              selected: true,
-              onSelected: (value) {},
+            Wrap(
+              spacing: 8,
+              children: [
+                TChoiceChip(
+                    text: 'Green', selected: false, onSelected: (value) {}),
+                TChoiceChip(
+                    text: 'Yellow', selected: true, onSelected: (value) {}),
+                TChoiceChip(
+                    text: 'Blue', selected: false, onSelected: (value) {}),
+              ],
+            ),
+          ],
+        ),
+
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const TSectionHeading(title: "Size", showActionButton: false),
+            const SizedBox(height: TSizes.spaceBtwItems / 2),
+            Wrap(
+              spacing: 8,
+              children: [
+                TChoiceChip(
+                    text: 'EU 34', selected: true, onSelected: (value) {}),
+                TChoiceChip(
+                    text: 'EU 36', selected: false, onSelected: (value) {}),
+                TChoiceChip(
+                    text: 'EU 38', selected: false, onSelected: (value) {}),
+              ],
             ),
           ],
         ),
