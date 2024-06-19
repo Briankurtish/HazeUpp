@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:hazeupp/common/widgets/chips/choice_chip.dart';
 import 'package:hazeupp/common/widgets/custom_shapes/container/rounded_container.dart';
