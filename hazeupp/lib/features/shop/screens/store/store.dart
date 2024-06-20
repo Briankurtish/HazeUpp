@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hazeupp/common/widgets/appbar/appbar.dart';
 import 'package:hazeupp/common/widgets/appbar/tab_bar.dart';
 import 'package:hazeupp/common/widgets/custom_shapes/container/search_container.dart';
@@ -6,6 +7,7 @@ import 'package:hazeupp/common/widgets/layouts/grid_layout.dart';
 import 'package:hazeupp/common/widgets/product_cart/cart_menu_icon.dart';
 import 'package:hazeupp/common/widgets/products/product_cards/brand_card.dart';
 import 'package:hazeupp/common/widgets/texts/section_heading.dart';
+import 'package:hazeupp/features/shop/screens/brands/all_brands.dart';
 import 'package:hazeupp/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:hazeupp/utils/constants/colors.dart';
 import 'package:hazeupp/utils/constants/sizes.dart';
@@ -59,7 +61,7 @@ class Store extends StatelessWidget {
                       TSectionHeading(
                         title: "Featured Brands",
                         showActionButton: true,
-                        onPressed: () {},
+                        onPressed: () => Get.to(() => AllBrandsScreen()),
                       ),
                       const SizedBox(height: TSizes.spaceBtwItems / 1.5),
 
