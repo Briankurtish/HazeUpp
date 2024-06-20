@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:hazeupp/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:hazeupp/utils/constants/colors.dart';
 import 'package:hazeupp/utils/constants/text_strings.dart';
 import 'package:hazeupp/utils/theme/theme.dart';
 
@@ -16,7 +16,16 @@ class App extends StatelessWidget {
       darkTheme: TAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
       // initialBinding: GeneralBindings(),
-      home: const OnBoardingScreen(),
+      // Show Loader or circular progress indicator meanwhile Authentication repository is deciding to show relevant screen
+
+      home: const Scaffold(
+        backgroundColor: TColors.primary,
+        body: Center(
+          child: CircularProgressIndicator(
+            color: Colors.white,
+          ),
+        ),
+      ),
     );
   }
 }
