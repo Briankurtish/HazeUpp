@@ -5,6 +5,7 @@ import 'package:hazeupp/common/widgets/custom_shapes/container/primary_header_co
 import 'package:hazeupp/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:hazeupp/common/widgets/list_tiles/t_user_profile.dart';
 import 'package:hazeupp/common/widgets/texts/section_heading.dart';
+import 'package:hazeupp/features/personalization/screens/address/address.dart';
 import 'package:hazeupp/features/personalization/screens/profile/profile.dart';
 import 'package:hazeupp/utils/constants/colors.dart';
 import 'package:hazeupp/utils/constants/sizes.dart';
@@ -60,7 +61,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.safe_home,
                     title: "My Address",
                     subTitle: 'Set Shopping Delivery Address',
-                    onTap: () {},
+                    onTap: () => Get.to(() => UserAddressScreen()),
                   ),
 
                   TSettingsMenuTile(
