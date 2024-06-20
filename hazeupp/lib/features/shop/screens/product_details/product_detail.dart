@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hazeupp/common/widgets/texts/section_heading.dart';
 import 'package:hazeupp/features/shop/screens/product_details/widget/bottom_add_to_cart_widget.dart';
 import 'package:hazeupp/features/shop/screens/product_details/widget/product_attribute.dart';
 import 'package:hazeupp/features/shop/screens/product_details/widget/product_image_slider.dart';
 import 'package:hazeupp/features/shop/screens/product_details/widget/product_meta_data.dart';
 import 'package:hazeupp/features/shop/screens/product_details/widget/rating_and_share.dart';
+import 'package:hazeupp/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:hazeupp/utils/constants/sizes.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
@@ -74,7 +76,7 @@ class ProductDetail extends StatelessWidget {
                         showActionButton: false,
                       ),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () => Get.to(() => ProductReviewsScreen()),
                         icon: const Icon(Iconsax.arrow_right_3, size: 18),
                       ),
                     ],

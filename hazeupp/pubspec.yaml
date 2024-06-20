@@ -29,6 +29,7 @@ dependencies:
   get_storage: ^2.1.1
 
   readmore: ^3.0.0
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_test:
@@ -49,6 +50,7 @@ flutter:
     - assets/images/animations/
     - assets/icons/categories/
     - assets/images/content/
+    - assets/images/reviews/
 
   fonts:
     - family: Poppins
