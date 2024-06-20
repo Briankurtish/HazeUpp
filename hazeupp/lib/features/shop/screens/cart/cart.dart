@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hazeupp/common/widgets/appbar/appbar.dart';
-import 'package:hazeupp/common/widgets/product_cart/add_remove_button.dart';
-import 'package:hazeupp/common/widgets/product_cart/cart_item.dart';
-import 'package:hazeupp/common/widgets/texts/t_product_price_text.dart';
 import 'package:hazeupp/features/shop/screens/cart/widgets/cart_items.dart';
 import 'package:hazeupp/features/shop/screens/checkout/checkout.dart';
 import 'package:hazeupp/utils/constants/sizes.dart';
