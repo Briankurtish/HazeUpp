@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "696056396517",
+    "project_id": "hazeupp-40d94",
+    "storage_bucket": "hazeupp-40d94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696056396517:android:b2d39b266aac2a7f19720c",
+        "android_client_info": {
+          "package_name": "com.example.hazeup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696056396517-k6vg85vst72bt2i76c4egb573q7ro77l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRWqd7whj64bYkTAq7oQEPg-xpEBkRk6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696056396517-8e5v6tq955oeapd2olppaq0sm015l7vj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "696056396517-1tsl1m3hj78t1jme2jb11icn15le40o9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.hazeupp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696056396517:android:63d030dc604501b619720c",
+        "android_client_info": {
+          "package_name": "com.example.hazeupp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696056396517-4cus2umdkr45qofv7831reer5kp35re1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hazeupp",
+            "certificate_hash": "e4c5a7da3268442377dc9d4b6319e344e47fb29e"
+          }
+        },
+        {
+          "client_id": "696056396517-k6vg85vst72bt2i76c4egb573q7ro77l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRWqd7whj64bYkTAq7oQEPg-xpEBkRk6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696056396517-8e5v6tq955oeapd2olppaq0sm015l7vj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "696056396517-1tsl1m3hj78t1jme2jb11icn15le40o9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.hazeupp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
