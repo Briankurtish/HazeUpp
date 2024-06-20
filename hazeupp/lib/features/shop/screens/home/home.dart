@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hazeupp/common/widgets/custom_shapes/container/primary_header_container.dart';
 import 'package:hazeupp/common/widgets/custom_shapes/container/search_container.dart';
 import 'package:hazeupp/common/widgets/layouts/grid_layout.dart';
 import 'package:hazeupp/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:hazeupp/common/widgets/texts/section_heading.dart';
+import 'package:hazeupp/features/shop/screens/all_products/all_products.dart';
 import 'package:hazeupp/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:hazeupp/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:hazeupp/features/shop/screens/home/widgets/promo_slider.dart';
@@ -74,7 +76,7 @@ class HomeScreen extends StatelessWidget {
                   // Heading
                   TSectionHeading(
                     title: "Popular Products",
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => AllProducts()),
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections),
                   // Popular Products
