@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hazeupp/common/widgets/appbar/appbar.dart';
-import 'package:hazeupp/common/widgets/custom_shapes/container/rounded_container.dart';
 import 'package:hazeupp/features/personalization/screens/address/add_new_address.dart';
 import 'package:hazeupp/features/personalization/screens/address/widgets/single_address.dart';
 import 'package:hazeupp/utils/constants/colors.dart';

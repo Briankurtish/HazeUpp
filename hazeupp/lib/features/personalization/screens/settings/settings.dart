@@ -7,6 +7,7 @@ import 'package:hazeupp/common/widgets/list_tiles/t_user_profile.dart';
 import 'package:hazeupp/common/widgets/texts/section_heading.dart';
 import 'package:hazeupp/features/personalization/screens/address/address.dart';
 import 'package:hazeupp/features/personalization/screens/profile/profile.dart';
+import 'package:hazeupp/features/shop/screens/cart/cart.dart';
 import 'package:hazeupp/utils/constants/colors.dart';
 import 'package:hazeupp/utils/constants/sizes.dart';
 import 'package:iconsax/iconsax.dart';
@@ -68,7 +69,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.shopping_cart,
                     title: "My Cart",
                     subTitle: 'Add, remove products and move to checkout',
-                    onTap: () {},
+                    onTap: () => Get.to(() => CartScreen()),
                   ),
 
                   TSettingsMenuTile(
