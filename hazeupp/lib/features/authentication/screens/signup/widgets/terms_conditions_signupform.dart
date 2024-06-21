@@ -14,7 +14,7 @@ class TTermsAndConditions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = SignupController();
+    final controller = SignupController.instance;
     final dark = THelperFunctions.isDarkMode(context);
     return Row(
       children: [
