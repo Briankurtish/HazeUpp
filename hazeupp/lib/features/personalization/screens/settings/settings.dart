@@ -5,6 +5,7 @@ import 'package:hazeupp/common/widgets/custom_shapes/container/primary_header_co
 import 'package:hazeupp/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:hazeupp/common/widgets/list_tiles/t_user_profile.dart';
 import 'package:hazeupp/common/widgets/texts/section_heading.dart';
+import 'package:hazeupp/data/repositories/authentication/authentication_repository.dart';
 import 'package:hazeupp/features/personalization/screens/address/address.dart';
 import 'package:hazeupp/features/personalization/screens/profile/profile.dart';
 import 'package:hazeupp/features/shop/screens/cart/cart.dart';
@@ -158,7 +159,8 @@ class SettingsScreen extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () =>
+                          AuthenticationRepository.instance.logout(),
                       child: const Text("Logout"),
                     ),
                   ),
