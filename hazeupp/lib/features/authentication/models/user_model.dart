@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hazeupp/utils/formatters/formatter.dart';
 
 class UserModel {
@@ -78,6 +79,23 @@ class UserModel {
   }
 
   // Factory method to create a userModel from a Firebase Documnent Snapshot
+  factory UserModel.fromSnapshot(
+      DocumentSnapshot<Map<String, dynamic>> document) {
+    if (document.data() != null) {
+      final data = document.data()!;
+      return UserModel(
+        id: document.id,
+        firstName: data['FirstName'] ?? '',
+        lastName: data['LastName'] ?? '',
+        username: data['Username'] ?? '',
+        email: data['Email'] ?? '',
+        phoneNumber: data['Phoneumber'] ?? '',
+        profilePicture: data['ProfileProfile'] ?? '',
+      );
+    } else {
+      return UserModel.empty();
+    }
+  }
 
   // A method that retrieves a UserModel instance from a JSON string.
   factory UserModel.fromJson(String source) =>

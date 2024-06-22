@@ -24,6 +24,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   iconsax: ^0.0.8
   lottie: ^3.1.2
+  shimmer: ^3.0.0
   connectivity_plus: ^3.0.3
 
   #State managment

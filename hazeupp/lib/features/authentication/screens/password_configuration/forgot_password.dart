@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 import 'package:hazeupp/features/authentication/controllers/forgot_password/forgot_password_controller.dart';
-import 'package:hazeupp/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:hazeupp/utils/constants/sizes.dart';
 import 'package:hazeupp/utils/constants/text_strings.dart';
 import 'package:hazeupp/utils/validators/validation.dart';
