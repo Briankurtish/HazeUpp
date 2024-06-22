@@ -28,7 +28,7 @@ class UserModel {
   String get formattedPhoneNo => TFormatter.formatPhoneNumber(phoneNumber);
 
   // static function to split full name into first name and last name
-  static List<String> nameParts(fullName) => fullName.Split(" ");
+  static List<String> nameParts(fullName) => fullName.split(" ");
 
   // Static function to generate a username from the fullname
   static String generateUserName(fullName) {
@@ -38,7 +38,7 @@ class UserModel {
 
     String camelCaseUsername =
         "$firstName$lastName"; // combine first and last name
-    String usernameWithPrefix = "hzup$camelCaseUsername"; // add cwt_ prefix
+    String usernameWithPrefix = "hzup_$camelCaseUsername"; // add cwt_ prefix
     return usernameWithPrefix;
   }
 
