@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:hazeupp/data/repositories/authentication/authentication_repository.dart';
 import 'package:hazeupp/data/repositories/user/user_repository.dart';
 import 'package:hazeupp/features/authentication/models/user_model.dart';
@@ -21,6 +22,7 @@ class UserController extends GetxController {
   Rx<UserModel> user = UserModel.empty().obs;
 
   final hidePassword = false.obs;
+  final imageLoading = false.obs;
   final verifyEmail = TextEditingController();
   final verifyPassword = TextEditingController();
   final userRepository = Get.put(UserRepository());
@@ -172,6 +174,8 @@ class UserController extends GetxController {
           maxWidth: 512);
 
       if (image != null) {
+        imageLoading.value = true;
+        // Upload image
         final imageUrl =
             await userRepository.uploadImage("Users/Images/Profile/", image);
 
@@ -180,6 +184,7 @@ class UserController extends GetxController {
         await userRepository.updateSingleField(json);
 
         user.value.profilePicture = imageUrl;
+        user.refresh();
         TLoaders.sucessSnackBar(
             title: "Congratulations",
             message: "Your Profile Image has been updated");
@@ -187,6 +192,8 @@ class UserController extends GetxController {
     } catch (e) {
       TLoaders.errorSnackBar(
           title: "Oh Snap!", message: "Something went wrong: $e");
+    } finally {
+      imageLoading.value = false;
     }
   }
 }
