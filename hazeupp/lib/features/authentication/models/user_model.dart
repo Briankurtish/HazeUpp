@@ -37,7 +37,7 @@ class UserModel {
 
     String camelCaseUsername =
         "$firstName$lastName"; // combine first and last name
-    String usernameWithPrefix = "cwt_$camelCaseUsername"; // add cwt_ prefix
+    String usernameWithPrefix = "hzup$camelCaseUsername"; // add cwt_ prefix
     return usernameWithPrefix;
   }
 

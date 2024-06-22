@@ -1,8 +1,8 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:hazeupp/data/repositories/authentication/authentication_repository.dart';
+import 'package:hazeupp/features/personalization/controllers/user_controller.dart';
 import 'package:hazeupp/utils/constants/image_strings.dart';
 import 'package:hazeupp/utils/helpers/network_managet.dart';
 import 'package:hazeupp/utils/popups/full_screen_loader.dart';
@@ -16,6 +16,7 @@ class LoginController extends GetxController {
   final email = TextEditingController();
   final password = TextEditingController();
   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
+  final userController = Get.put(UserController());
 
   // @override
   // void onInit() {
@@ -60,6 +61,38 @@ class LoginController extends GetxController {
       // Redirect
       AuthenticationRepository.instance.screenRedirect();
     } catch (e) {
+      TScreenLoader.stopLoading();
+      TLoaders.errorSnackBar(title: "Oh Snap!", message: e.toString());
+    }
+  }
+
+  Future<void> googleSignIn() async {
+    try {
+      // Start Loading
+      TScreenLoader.openLoadingDialog(
+          "Logging you in ...", TImages.docerAnimation);
+
+      // Check Internet connectivity
+      final isConnected = await NetworkManager.instance.isConnected();
+      if (!isConnected) {
+        TScreenLoader.stopLoading();
+        return;
+      }
+
+      // Google Authentication
+      final userCredentials =
+          await AuthenticationRepository.instance.signInWithGoogle();
+
+      // Save User record
+      await userController.saveUserRecord(userCredentials);
+
+      // remove loader
+      TScreenLoader.stopLoading();
+
+      // Redirect User
+      AuthenticationRepository.instance.screenRedirect();
+    } catch (e) {
+      // remove loader
       TScreenLoader.stopLoading();
       TLoaders.errorSnackBar(title: "Oh Snap!", message: e.toString());
     }
